@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <bool name="bb_bottom_bar_is_tablet_mode">false</bool>
+    <color name="bb_darkBackgroundColor">#212121</color>
+    <color name="bb_inActiveBottomBarItemColor">#747474</color>
+    <color name="bb_tabletRightBorderDark">#505050</color>
+    <item name="green" type="color">#FF3BBD79</item>
+    <item name="gray" type="color">#FF323A45</item>
+    <item name="color_primary" type="drawable">#FFF8F8F8</item>
+    <item name="text_color_primary" type="drawable">#000000</item>
+    <item name="color_primary_dark" type="drawable">#494E57</item>
+    <item name="color_primary" type="color">#FFF8F8F8</item>
+    <item name="text_color_primary" type="color">#000000</item>
+    <item name="color_primary_dark" type="color">#494E57</item>
+    <item name="color_bottom_bar" type="color">#F8F8F8</item>
+
+    <item name="button_disable" type="color">#ffc6c6c6</item>
+
+    <item name="line_green" type="drawable">#ff3bbd79</item>
+    <item name="line_gray" type="drawable">#ffc7cacc</item>
+    <color name="background_tab_pressed">#ffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_pressed">#ffd5d5d5</color>
+    <color name="white_pressed1">#ffdfdfdf</color>
+    <drawable name="white">#ffffffff</drawable>
+    <color name="font_black">#010101</color>
+    <drawable name="black">#ff000000</drawable>
+    <color name="black">#ff000000</color>
+
+    <color name="file_downloaded">#ffe9f5f0</color>
+
+    <color name="input_background">#ffe8e8e8</color>
+
+    <color name="gray_dark">#f0f0f0</color>
+</resources>
