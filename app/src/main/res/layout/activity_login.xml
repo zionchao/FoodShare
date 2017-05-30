@@ -6,7 +6,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/part_toolbar"/>
+
 
         <RelativeLayout
             android:id="@+id/layoutRoot"
@@ -18,7 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/entrance1" />
+                android:background="@drawable/entrance1"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -60,7 +66,7 @@
                     <LinearLayout
                         android:id="@+id/loginLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="visible">
 
@@ -143,7 +149,6 @@
 
 
                 <RelativeLayout
-
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1">
@@ -169,7 +174,11 @@
                         android:gravity="center"
                         android:text="去注册"
                         android:textColor="@color/font_white"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+
+                        android:layout_marginTop="20dp"
+
+                        />
 
 
                 </RelativeLayout>

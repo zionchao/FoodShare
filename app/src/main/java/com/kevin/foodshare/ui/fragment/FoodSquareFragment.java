@@ -48,6 +48,7 @@ public class FoodSquareFragment extends BaseFragment {
         foodSquareAdapter=new FoodSquareAdapter(getActivity());
         foodList.setLayoutManager(new LinearLayoutManager(getActivity()));
         foodList.setAdapter(foodSquareAdapter);
+
     }
 
     @Override public void onDestroyView() {

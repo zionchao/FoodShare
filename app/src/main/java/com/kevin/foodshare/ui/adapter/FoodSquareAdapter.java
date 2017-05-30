@@ -1,6 +1,7 @@
 package com.kevin.foodshare.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.kevin.foodshare.R;
+import com.kevin.foodshare.ui.activity.OrderDetailsActivity;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
 import com.marshalchen.ultimaterecyclerview.UltimateViewAdapter;
 
@@ -87,6 +89,13 @@ public class FoodSquareAdapter extends UltimateViewAdapter<FoodSquareAdapter.MyV
         public MyViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(context, OrderDetailsActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
