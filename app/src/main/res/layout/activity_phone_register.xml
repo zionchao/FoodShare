@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways|snap" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divide">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/divide"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="加入美食共享，体验美食的乐趣！"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textSize="18sp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <com.kevin.foodshare.widget.LoginEditText
+                            android:id="@+id/globalKeyEdit"
+                            style="@style/EmailEdit"
+                            android:hint="用户名(个性后缀)"
+                            android:digits="@string/input_format_global_key"
+
+                            />
+
+                        <include
+                            layout="@layout/divide_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/padding_15"
+                            android:layout_marginRight="@dimen/padding_15" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/countryCode"
+                                android:layout_width="55dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/padding_15"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:text="+86"
+                                android:textColor="@color/font_green"
+                                android:textSize="16sp" />
+
+                            <View
+                                style="@style/DivideLineVer"
+                                android:layout_height="20dp" />
+
+                            <com.kevin.foodshare.widget.LoginEditText
+                                android:id="@+id/phoneEdit"
+                                style="@style/EmailEdit"
+                                android:hint="手机号"
+                                android:inputType="number"
+                              />
+
+                        </LinearLayout>
+
+
+                        <include
+                            layout="@layout/divide_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/padding_15"
+                            android:layout_marginRight="@dimen/padding_15" />
+
+                        <com.kevin.foodshare.widget.LoginEditText
+                            android:id="@+id/passwordEdit"
+                            style="@style/EmailEdit"
+                            android:hint="设置密码"
+                            android:inputType="textPassword"
+                            />
+
+                        <include
+                            layout="@layout/divide_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/padding_15"
+                            android:layout_marginRight="@dimen/padding_15" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.kevin.foodshare.widget.LoginEditText
+                                android:id="@+id/phoneCodeEdit"
+                                style="@style/EmailEdit"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:visibility="visible"
+                                android:hint="手机验证码"
+                                android:inputType="number"
+                                />
+
+                            <View
+                                style="@style/DivideLineVer"
+                                android:layout_height="15dp" />
+
+                            <TextView
+                                android:id="@+id/sendCode"
+                                style="@style/ValidePhoneView" />
+
+                        </LinearLayout>
+
+
+                        <com.kevin.foodshare.widget.LoginEditText
+                            android:id="@+id/captchaEdit"
+                            style="@style/EmailEdit"
+                            android:hint="验证码"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/loginButton"
+                        style="@style/SendButton"
+                        android:enabled="true"
+                        android:text="注册" />
+
+                    <TextView
+                        android:id="@+id/textClause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_15"
+                        android:layout_marginRight="@dimen/padding_15"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/font_6"
+                        android:textSize="14sp"
+                        tools:text="码市用户" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/otherRegister"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="21dp"
+                    android:gravity="center"
+                    android:text="邮箱注册"
+                    android:textColor="@color/font_green"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

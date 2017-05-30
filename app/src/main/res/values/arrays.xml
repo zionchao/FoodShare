@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="food_type">
+    <string-array name="food_type">
         <item>烘焙</item>
         <item>汤羹</item>
         <item>食材</item>
-    </array>
+    </string-array>
 </resources>

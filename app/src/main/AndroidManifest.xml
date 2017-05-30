@@ -27,12 +27,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.LoginActivity"/>
-        <activity android:name=".ui.activity.RegisterActivity"/>
-        <activity android:name=".ui.activity.FoodPublishActivity"/>
-        <activity android:name=".ui.activity.FoodDetails"/>
-        <activity android:name=".ui.activity.PurchaseActivity"/>
-        <activity android:name=".ui.activity.OrderDetails"/>
+        <activity android:name=".ui.activity.LoginActivity"  android:label="@string/login_name"/>
+        <activity android:name=".ui.activity.RegisterActivity" android:label="@string/register_name"/>
+        <activity android:name=".ui.activity.FoodPublishActivity" android:label="@string/food_publish_name"/>
+        <activity android:name=".ui.activity.FoodDetails" android:label="@string/food_details_name"/>
+        <activity android:name=".ui.activity.PurchaseActivity" android:label="@string/purchase_name"/>
+        <activity android:name=".ui.activity.OrderDetailsActivity" android:label="@string/order_details_name"/>
+        <activity android:name=".ui.activity.OrderSubmitActivity" android:label="@string/order_details_name"/>
+        <activity android:name=".ui.activity.PaymentActivity" android:label="@string/payment_name"/>
 
         <!--Image Selector Entry-->
         <activity

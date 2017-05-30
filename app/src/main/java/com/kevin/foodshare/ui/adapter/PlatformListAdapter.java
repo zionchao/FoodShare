@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.kevin.foodshare.R;
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
 import com.marshalchen.ultimaterecyclerview.UltimateViewAdapter;
@@ -21,11 +21,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by zhangchao_a on 2017/5/29.
  */
 
-public class FoodSquareAdapter extends UltimateViewAdapter<FoodSquareAdapter.MyViewHolder> {
+public class PlatformListAdapter extends UltimateViewAdapter<PlatformListAdapter.MyViewHolder> {
 
     private Context context;
 
-    public FoodSquareAdapter(Context context) {
+    public PlatformListAdapter(Context context) {
         super();
         this.context=context;
     }
@@ -43,7 +43,7 @@ public class FoodSquareAdapter extends UltimateViewAdapter<FoodSquareAdapter.MyV
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent) {
         MyViewHolder holder = new MyViewHolder(LayoutInflater.from(
-                context).inflate(R.layout.fragment_food_square_item, parent,
+                context).inflate(R.layout.adapter_platform_item, parent,
                 false));
         return holder;
     }
@@ -60,7 +60,10 @@ public class FoodSquareAdapter extends UltimateViewAdapter<FoodSquareAdapter.MyV
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.img_cover.setBackgroundResource(R.drawable.xiaolongxia);
+        if (position%2==0){
+            holder.img_icon.setBackgroundResource(R.drawable.ali_pay);
+        }else
+            holder.img_icon.setBackgroundResource(R.drawable.wechat_pay);
     }
 
     @Override
@@ -75,14 +78,13 @@ public class FoodSquareAdapter extends UltimateViewAdapter<FoodSquareAdapter.MyV
 
     public class MyViewHolder extends UltimateRecyclerviewViewHolder {
 
-        @BindView(R.id.img_cover)
-        ImageView img_cover;
-        @BindView(R.id.title)
-        TextView title;
-        @BindView(R.id.user_name)
-        TextView user_name;
-        @BindView(R.id.user_icon)
-        CircleImageView user_icon;
+        @BindView(R.id.img_icon)
+        ImageView img_icon;
+        @BindView(R.id.txt_name)
+        TextView txt_name;
+        @BindView(R.id.radio)
+        RadioButton user_name;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
